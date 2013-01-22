@@ -1,0 +1,98 @@
+#content {
+	background-color: white;
+}
+
+.center {
+	text-align: center;
+}
+
+.word {
+	cursor: pointer;
+}
+
+div[data-role=collapsible] .ui-icon {
+	display: none;
+}
+
+#loading {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	visibility: hidden;
+}
+
+#wordCandidates {
+	height: 500px;
+	width: 98%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#wordChains {
+	margin-top: 15px;
+	margin-left: 10px;
+	display: block;
+	height: 500px;
+	width: 98%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#recyclingBin {
+	height: 30px;
+	position: absolute;
+	right: 0px;
+	top: 20px;
+	display: none;
+	cursor: pointer;
+}
+
+.recycling {
+	position: absolute;
+	margin-top: 0px;
+	display: block;
+	width: 91%;
+	height: 500px;
+}
+
+#footerName {
+	cursor: pointer;
+}
+
+#remainingLetters {
+	color: rgb(90, 90, 90);
+}
+
+.topPad {
+	padding-top: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#header {
+	padding-left: 10px;
+}
+
+#text {
+	position: relative;
+	top: -3px;
+}
+
+#helpSection {
+	position: relative;
+	left: 30%;
+	top: 3px;
+	text-shadow: 1px 2px 0px rgb(100,100,100);
+}
+
+#helpSection:hover {
+	text-shadow: 1px 2px 0px rgb(220,130,130);
+}
+
+#dontGetIt {
+	color: white;
+	position: relative;
+	left: -43px;
+	top: -24px;
+	text-decoration: none;
+}
