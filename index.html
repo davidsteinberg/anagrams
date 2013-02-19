@@ -1,3 +1,10 @@
+<!--
+	File:    index.html
+	Author:  David Steinberg
+	Date:    2012.09.28
+	Project: Anagrams
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,18 +23,46 @@
 	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
-	<!-- -->
+	<!-- Personal Aassets -->
 
 	<link rel="stylesheet" href="assets/css/style.css" />
 	<script src="assets/js/script.js"></script>
+	
+	<!-- Google Analytics -->
+	
+	<script>	
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36304589-1']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+			var ga = document.createElement('script');
+			ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
 </head>
 <body>
+
+<!-- Main Page -->
+
 <div data-role="page">
+
+	<!-- Header -->
+
 	<div data-role="header" data-theme="c">
 		<div id="header" class="ui-grid-d center">
+
+			<!-- Text Input -->
+
 			<div class="ui-block-a topPad">
 				<input type="text" data-theme="d" id="text" value="" placeholder="Type words or names here" autofocus="true" />	
 			</div>
+			
+			<!-- Language Select -->
+			
 			<div class="ui-block-b topPad">
 				<select id="language" data-theme="d" name="language">
 					<option value="german">Deutsch</option>
@@ -44,9 +79,15 @@
 					<option value="names">Proper Names</option>
 				</select>
 			</div>
+
+			<!-- Go Button -->
+
 			<div class="ui-block-c topPad">
 				<input type="submit" data-theme="b" id="submit" name="submit" value="Go" />
 			</div>
+			
+			<!-- Help Section -->
+			
 			<div class="ui-block-d topPad">
 				<span id="helpSection"><a id="helpButton" href="#help" data-theme="c" data-rel="popup" data-role="button" data-icon="info" data-iconpos="notext"></a><a id="dontGetIt" href="#help" data-rel="popup">don't get it</a></span>
 				<div data-role="popup" id="help" class="ui-content">
@@ -71,14 +112,23 @@
 					</p>
 				</div>
 			</div>
+
+			<!-- Remaining Letters -->
+
 			<div class="ui-block-e" style="padding-top: 6px;">
 				<a style="color: rgb(180,180,180);display: block;margin-bottom: 6px;">Remaining Letters</a>
 				<a id="remainingLetters">&nbsp;</a>
 			</div>
 		</div>
 	</div>
+
+	<!-- Content -->
+
 	<div data-role="content" id="content">
 		<div class="ui-grid-a center">
+
+			<!-- Anagram Results -->
+
 			<div class="ui-block-a" style="position: relative;">
 				<h2>Anagrams</h2>
 				<div id="loading">
@@ -87,6 +137,9 @@
 				<ul class="recycling"></ul>
 				<div id="wordCandidates" data-role="collapsible-set" data-inset="false"></div>
 			</div>
+
+			<!-- Saved Words -->
+
 			<div class="ui-block-b" style="position: relative;">
 				<img id="recyclingBin" src="assets/img/recycling.png" />
 				<h2>Saved Words</h2>
@@ -94,8 +147,11 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Footer -->
+
 	<div data-role="footer" data-theme="b">
-		<h4>&copy; 2012 <a href="http://davidasteinberg.com">David A. Steinberg</a> with big credit to <a href="http://www.wordsmith.org/anagram/index.html">Wordsmith.org</a></h4>
+		<h4>Big thanks and credit to <a href="http://www.wordsmith.org/anagram/index.html">Wordsmith.org</a></h4>
 	</div>
 </div>
 
